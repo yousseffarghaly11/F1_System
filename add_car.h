@@ -34,6 +34,8 @@ class add_car
     double get_topSpeed() const;
     double get_fuelLevel() const;
 
+    //display
+    virtual void display() const = 0;
 
 };
 
