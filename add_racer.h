@@ -47,6 +47,9 @@ public:
     float get_high() const;
     float get_weight() const;
     string get_carModel() const;
+
+    //display
+    virtual void display()const;
 };
 
 #endif

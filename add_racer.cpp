@@ -70,3 +70,17 @@ string add_racer::get_carModel() const
 {
     return carModel;
 }
+
+//display
+void add_racer::display()const
+{
+    cout<<"racer Name: "<<racerName<<" || "<<
+    "team Name: "<<team<<" || "<<
+    "racer Number: "<<racerNumber<<" || "<<
+    "racer's point: "<<points<<" || "<<
+    "racer's age: "<<age<<" || "<<
+    "racer's high: "<<high<<" || "<<
+    "racer's weight: "<<weight<<" || "<<
+    "car Model: "<<carModel;
+
+}
