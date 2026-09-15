@@ -44,3 +44,12 @@ double add_car::get_fuelLevel() const
 {
     return fuelLevel;
 }
+
+//display
+void add_car::display()const
+{
+    cout <<"team Name: "<<teamName<<" || "<<
+    "engine Type: "<<engineType<<" || "<<
+    "topSpeed: "<<topSpeed<<" || "<<
+    "fuel Level: "<<fuelLevel;
+}
