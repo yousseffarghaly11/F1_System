@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//setters
 void raceEvent::set_eventName(string eventName_1) {
     eventName = eventName_1;
 }
@@ -12,6 +13,7 @@ void raceEvent::set_lapsCount(int lapsCount_1) {
     lapsCount = lapsCount_1;
 }
 
+//getters
 string raceEvent::get_eventName() const {
     return eventName;
 }
@@ -20,6 +22,7 @@ int raceEvent::get_lapscounts() const {
     return lapsCount;
 }
 
+//vectors
 void raceEvent::addRacer(const add_racer& newRacer) {
     registeredRacers.push_back(newRacer);
     cout << "Racer added successfully to " << eventName << "\n";
@@ -30,6 +33,7 @@ void raceEvent::addCar(const add_car& newCar) {
     cout << "Car added successfully to " << eventName << "\n";
 }
 
+//display
 void raceEvent::display() const {
     cout << "=== Race Event: " << eventName << " ===\n";
     cout << "Total Laps: " << lapsCount << "\n";
