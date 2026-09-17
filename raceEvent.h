@@ -17,12 +17,19 @@ class raceEvent : public add_car , public add_racer
 
     public:
     //default constructor
-    raceEvent():eventName("unknown"),lapsCount(0)
+    raceEvent(): add_car(),add_racer(), eventName("unknown"),lapsCount(0)
     {
     }
     //initial value constructor
-    raceEvent(string init_eventName,int init_lapsCount):
-    eventName(init_eventName),lapsCount(init_lapsCount)
+    raceEvent(string init_eventName,int init_lapsCount,
+        //parameters from base class (add_car.h)
+        string init_teamName , string init_engineType ,double init_topSpeed,double init_fuelLevel
+        //parameters from base class (add_racer.h)
+        ,string init_racerName, string init_team, int init_racerNumber, int init_points, int init_age, float init_high, float init_weight, string init_carModel):
+        add_car(init_teamName,init_engineType,init_topSpeed,init_fuelLevel),
+        add_racer(init_racerName,init_team,init_racerNumber,init_points,init_age,init_high,init_weight,init_carModel)
+        
+        ,eventName(init_eventName),lapsCount(init_lapsCount)
     {
     }
 
@@ -35,7 +42,7 @@ class raceEvent : public add_car , public add_racer
     int get_lapscounts() const;
 
     void addRacer(const add_racer newRacer);
-    void display()const;
+    virtual void display()const = 0;
 
 };
 
