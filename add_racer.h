@@ -1,6 +1,7 @@
 #ifndef ADD_RACER_H
 #define ADD_RACER_H
 #include <string>
+#include "add_car.h"
 
 using namespace std;
 
@@ -14,29 +15,21 @@ private:
     int age;
     float high;
     float weight;
-    string carModel;
+    add_car racerCar;
 
 public:
-    // Default constructor
-    add_racer() : racerName("unknown"), team("unknown"), racerNumber(0), points(0), age(0), high(0), weight(0), carModel("unknown")
-    {
-    }
-
-    // Initial value constructor
-    add_racer(string init_racerName, string init_team, int init_racerNumber, int init_points, int init_age, float init_high, float init_weight, string init_carModel) :
-        racerName(init_racerName), team(init_team), racerNumber(init_racerNumber), points(init_points), age(init_age), high(init_high), weight(init_weight), carModel(init_carModel)
-    {
-    }
+    add_racer();
+    add_racer(string init_racerName, string init_team, int init_racerNumber, int init_points, int init_age, float init_high, float init_weight, add_car init_car);
 
     // Setters
-    void set_racerName(string racerName_1);
-    void set_team(string team_1);
-    void set_racerNumber(int racerNumber_1);
-    void set_points(int points_1);
-    void set_age(int age_1);
-    void set_high(float high_1);
-    void set_weight(float weight_1);
-    void set_carModel(string carModel_1);
+    void set_racerName(string name);
+    void set_team(string t);
+    void set_racerNumber(int num);
+    void set_points(int pts);
+    void set_age(int a);
+    void set_high(float h);
+    void set_weight(float w);
+    void set_racerCar(add_car car);
 
     // Getters
     string get_racerName() const;
@@ -46,10 +39,8 @@ public:
     int get_age() const;
     float get_high() const;
     float get_weight() const;
-    string get_carModel() const;
+    add_car get_racerCar() const;
 
-    //display
-    virtual void display()const;
+    void display() const;
 };
-
 #endif
